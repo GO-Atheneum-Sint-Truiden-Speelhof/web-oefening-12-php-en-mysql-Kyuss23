@@ -6,8 +6,8 @@
 	<h1 class="display-4">Deelnemers Wedstrijd:</h1>
 </div>
 <div class="row">
-    <div class="table-responsive-lg">
-        <table>
+    <div id="table">
+        <table class="table table-bordered table-sm table-dark">
             <thead>
                 <tr>
                     <td>ID</td>
@@ -25,7 +25,9 @@
                 </tr>
             </thead>
             <tbody>
-                
+                <?php 
+                    printDB();
+                ?>
             </tbody>
         </table>
     </div>

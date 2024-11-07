@@ -18,13 +18,8 @@
 			</div>
             <div class="form-group row">
 				<div class="col">
-					<button onclick="login()" type="submit" id="loginKnop">Login</button>
+					<button type="submit" id="loginKnop">Login</button>
 				</div>
 			</div>
     </div>
-</div>
-<script>
-    function login(){
-        location.href = 'inschrijvingen.php?page=inschrijvingen'
-    }
-</script>
+</div>>

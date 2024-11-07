@@ -31,5 +31,18 @@
     }
 
     function printDB(){
+        $conn = connectToDB();
+        $sql = "SELECT * FROM `tbl_wedstrijd`";
+        
+        $result = $conn->query($sql);
+        while ($row = $result->fetch_row()){
+            echo '<tr>';
+            for ($i = 0; $i < count($row); $i++){
+                echo "<td>";
+                echo "$row[$i]";
+                echo "</td>";
+            }
+            echo "</tr>";
+        }
     }
 ?>
