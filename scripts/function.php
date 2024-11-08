@@ -44,5 +44,23 @@
             }
             echo "</tr>";
         }
+    }  
+    
+    function login(){
+        $conn = connectToDB();
+        $user = $_POST['username'];  
+        $pwd = $_POST['password'];  
+
+        $sql = "SELECT * FROM `tbl_gebruikers` WHERE Naam = '$user' AND Passwoord = '$pwd'";
+        $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Login is correct, fetch and display all data from the wedstrijd table
+        echo "<p>Login succesvol!</p>";
+        header("refresh: 3; URL=begin.php?page=inschrijvingen");
     }
+
+    // Verbinding sluiten
+    $conn->close();
+    }   
 ?>

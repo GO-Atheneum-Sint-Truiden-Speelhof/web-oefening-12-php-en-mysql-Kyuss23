@@ -7,7 +7,7 @@
 </div>
 <div class="row">
     <div id="table">
-        <table class="table table-bordered table-sm table-dark">
+        <table class="table table-bordered table-sm table-dark table-striped">
             <thead>
                 <tr>
                     <td>ID</td>

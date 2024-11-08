@@ -1,25 +1,30 @@
+<?php 
+    include("scripts/function.php");
+?>
+
 <div class="jumbotron">
 	<h1 class="display-4">Log hier in!</h1>
 </div>
 <div class="row">
     <div class="col-md-6">
+	<form method="POST" action="begin.php?page=login">
 		    <div class="form-group row">
 				<div class="col">
-					<label for="gebrNaam">Gebruikersnaam:</label><br>
-					<p><input type="text" id="gebrNaam" class="form-control" name="gebrNaam"></p>
+					<label for="username">Username:</label><br>
+					<input type="text" id="username" name="username" required><br><br>
 				</div>
 			</div>
-			
 			<div class="form-group row">
 				<div class="col">
-					<label for="passwoord">Passwoord:</label><br>
-					<p><input type="password" id="passwoord" class="form-control" name="passwoord"></p>
+					<label for="password">Password:</label><br>
+					<input type="password" id="password" name="password" required><br><br>
 				</div>
 			</div>
             <div class="form-group row">
 				<div class="col">
-					<button type="submit" id="loginKnop">Login</button>
+					<button type="submit">Login</button>
 				</div>
 			</div>
+		</form>
     </div>
-</div>>
+</div>
