@@ -1,5 +1,10 @@
 <?php 
     include("scripts/function.php");
+
+	// HIER CONTROLE DOE: Wil je het login formulier laten zien? Of de gegeven gebruiker laten inloggen?
+	if(isset($_POST['username']) && !empty($_POST['username'])){
+		login();
+	} else {
 ?>
 
 <div class="jumbotron">
@@ -7,7 +12,10 @@
 </div>
 <div class="row">
     <div class="col-md-6">
-		<form method="post" onsubmit="login()">
+		<!-- Je verwijst hier naar een javascript function, niet naar een php-actie.
+		 	 Je vorige code was beter 
+		<form method="post" onsubmit="login()">-->
+		<form method="POST" action="begin.php?page=login">
 		    <div class="form-group row">
 				<div class="col">
 					<label for="username">Username:</label><br>
@@ -28,3 +36,5 @@
 		</form>
     </div>
 </div>
+
+<?php } ?>
