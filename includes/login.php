@@ -7,7 +7,7 @@
 </div>
 <div class="row">
     <div class="col-md-6">
-	<form method="POST" action="begin.php?page=login">
+		<form method="post" onsubmit="login()">
 		    <div class="form-group row">
 				<div class="col">
 					<label for="username">Username:</label><br>
