@@ -1,4 +1,7 @@
 <?php 
+	if (session_status() == PHP_SESSION_NONE) {
+		session_start();
+	}
     include("scripts/function.php");
 
 	// HIER CONTROLE DOE: Wil je het login formulier laten zien? Of de gegeven gebruiker laten inloggen?

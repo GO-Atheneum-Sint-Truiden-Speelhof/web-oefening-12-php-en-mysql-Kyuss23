@@ -19,11 +19,12 @@
 
     if (mail("KP23@localhost", "Deelname Wedstrijd", $bericht, $verzender)){
         echo "BERICHT VERZONDEN <br>";
-        savetoDB();
     }
     else{
         echo "BERICHT NIET VERZONDEN <br>";
     }
+
+    savetoDB();
 ?>
 
 <div class="jumbotron">

@@ -15,6 +15,7 @@
          return $conn;
 
     }
+
     function saveToDB(){
         $conn = connectToDB();
         $sql = "INSERT INTO tbl_wedstrijd(NAAM, ADRES, POSTCODE, GEMEENTE, TELEFOONNUMMER, `E-MAILADRES`, GEBOORTEDATUM, `TITEL FOTO`, CAMERA, LENS, `BESCHRIJVING FOTO`)
@@ -55,6 +56,7 @@
         $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
+        $_SESSION['logged_in'] = true;
         echo "<p>Login succesvol!</p>";
         header("refresh: 3; URL=begin.php?page=inschrijvingen");
     }
